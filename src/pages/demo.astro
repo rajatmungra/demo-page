@@ -1,0 +1,64 @@
+---
+// constants
+const title_left="Al connectivity with 5th Generation Internet"
+const text_left = "5G and high-speed internet refer to the latest generation of wireless and wired communication technologies that provide faster data transfer speeds, lower latency, and greater network capacity than previous generations. The widespread adoption of 5G and high-speed internet has enabled the development of new Al products and services that require large amounts of data transfer, such as autonomous vehicles, smart cities, and virtual and augmented reality applications. With 5G, data can be transferred up to 100 times faster than 4G. enabling real-time communication and faster decision-making "
+const title_right= "The future of 5G in Al-apps"
+const text_right = "The use of 5G and high-speed internet in Al products has also enabled the development of edge computing, which involves processing data closer to the source rather than sending it to a centralized server, Edge computing can reduce latency and improve response times, which is particularly important for applications such as autonomous vehicles. where decisions need to be made in real-time. In addition, the use of 5G and high-speed internet has enabled the development of cloud-based Al platforms that can be accessed from anywhere, making it easier for companies to deploy and scale Al applications. Overall, the integration of 5G and high-speed internet in Al products has the potential to transform various industries by creating more intelligent and efficient systems that can process data faster and make decisions in real-time."
+
+// imports
+
+import section_1_photo from '../photos/section_1_photo.jpg'
+import section_2_photo from '../photos/section_2_photo.jpg'
+---
+
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        @media screen and (max-width: 480px) {
+            .main {
+                padding: 5px;
+            }
+            .section_1 {
+                margin: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class='m-[5px] p-20 font-poppins '>
+        
+        <div class="flex flex-wrap mt-10 section_1 w-full md:justify-center" >
+            <div class="w-[500px] px-5 md:w-full">
+                <div class="font-bold text-[30px] mb-7 ">
+                    {title_left}
+                </div>
+                <div>
+                    {text_left}
+                </div>
+            </div>
+            <img class='ml-auto px-5 md:ml-0  ' src={section_1_photo} alt='img1'/> 
+        </div>
+
+        <div class="flex flex-wrap mt-10 section_2 w-full md:justify-center">
+            <img class='mr-auto px-5 md:mr-0' src = {section_2_photo} alt='img2'>
+            <div class='w-[500px] px-5 md:w-full'>
+                <div class="font-bold text-[30px] mb-7">
+                    {title_right}
+                </div>
+                <div>
+                    {text_right}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
