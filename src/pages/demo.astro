@@ -22,36 +22,79 @@ import section_2_photo from '../photos/section_2_photo.jpg'
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-        @media screen and (max-width: 480px) {
+        @media (max-width: 480px) {
             .main {
-                padding: 5px;
+                padding :1rem;
             }
-            .section_1 {
+            .section_1{
                 margin: 5px;
+                justify-content: center;
             }
+            .section_1 div{
+                order:2
+            }
+            .section_1 img {
+                margin-left: 0;
+                order: 1
+            }
+            .section_2{
+                margin: 5px;
+                justify-content: center;
+            }
+            .section_2 img {
+                margin-right: 0;
+            }
+        }
+        @media (min-width : 481px) and (max-width : 1150px){
+            .main{
+                /* padding: 2rem; */
+            }
+            .section_1{
+                margin: 5px;
+                justify-content: center;
+            }
+            .section_1 div{
+                order:2
+            }
+            .section_1 img {
+                margin-left: 0;
+                order: 1
+            }
+            .section_2{
+                margin: 5px;
+                justify-content: center;
+            }
+
+            
+            .section_2 img {
+                margin-right: 0;
+            }
+            
         }
 
     </style>
 </head>
 <body>
-    <div class='m-[5px]  sm:p-2 md:p-16 lg:p-20 font-poppins '>
+    <div class='m-[5px] main lg:p-20 font-poppins '>
         
-        <div class="flex flex-wrap mt-10 section_1 w-full md:justify-center" >
-            <div class="w-[500px] px-5 md:w-full">
-                <div class="font-bold text-[30px] mb-7 ">
-                    {title_left}
-                </div>
-                <div>
-                    {text_left}
-                </div>
+        <div class="flex flex-row-reverse flex-wrap justify-center w-full section_1">
+            <img class='ml-auto px-5 ' src={section_1_photo} alt='img1'/> 
+
+            <div class="w-[500px] px-5 " >
+                    <div class="font-bold text-[30px] mb-7 sm:text-[20px]">
+                        {title_left}
+                    </div>
+                    <div>
+                        {text_left}
+                    </div>
             </div>
-            <img class='ml-auto px-5 md:ml-0  ' src={section_1_photo} alt='img1'/> 
         </div>
 
-        <div class="flex flex-wrap mt-10 section_2 w-full md:justify-center">
-            <img class='mr-auto px-5 md:mr-0' src = {section_2_photo} alt='img2'>
-            <div class='w-[500px] px-5 md:w-full'>
-                <div class="font-bold text-[30px] mb-7">
+        <div class="flex main flex-wrap mt-10 justify-center section_2 w-full">
+            <img class='mr-auto px-5 ' src = {section_2_photo} alt='img2'/>
+
+            <div class='w-[500px] px-5 '>
+                <div class="font-bold text-[30px] mb-7 sm:text-[20px]">
                     {title_right}
                 </div>
                 <div>
