@@ -31,7 +31,13 @@ import section_2_photo from '../photos/section_2_photo.jpg'
                 justify-content: center;
             }
             .section_1 div{
-                order:2
+                order:2;
+            }
+            .section_1 div:nth-child(1), .section_2 div:nth-child(1){
+                font-size: 20px;
+            }
+            .section_1 div:nth-child(2), .section_2 div:nth-child(2){
+                font-size: 12px;
             }
             .section_1 img {
                 margin-left: 0;
@@ -46,15 +52,13 @@ import section_2_photo from '../photos/section_2_photo.jpg'
             }
         }
         @media (min-width : 481px) and (max-width : 1150px){
-            .main{
-                /* padding: 2rem; */
-            }
+            
             .section_1{
                 margin: 5px;
                 justify-content: center;
             }
             .section_1 div{
-                order:2
+                order:2;
             }
             .section_1 img {
                 margin-left: 0;
@@ -63,9 +67,7 @@ import section_2_photo from '../photos/section_2_photo.jpg'
             .section_2{
                 margin: 5px;
                 justify-content: center;
-            }
-
-            
+            }   
             .section_2 img {
                 margin-right: 0;
             }
@@ -81,7 +83,7 @@ import section_2_photo from '../photos/section_2_photo.jpg'
             <img class='ml-auto px-5 ' src={section_1_photo} alt='img1'/> 
 
             <div class="w-[500px] px-5 " >
-                    <div class="font-bold text-[30px] mb-7 sm:text-[20px]">
+                    <div class="font-bold text-[30px] mb-7">
                         {title_left}
                     </div>
                     <div>
@@ -94,9 +96,9 @@ import section_2_photo from '../photos/section_2_photo.jpg'
             <img class='mr-auto px-5 ' src = {section_2_photo} alt='img2'/>
 
             <div class='w-[500px] px-5 '>
-                <div class="font-bold text-[30px] mb-7 sm:text-[20px]">
+                <div class="font-bold text-[30px] mb-7">
                     {title_right}
-                </div>
+                </div >
                 <div>
                     {text_right}
                 </div>
