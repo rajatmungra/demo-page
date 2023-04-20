@@ -33,13 +33,13 @@ import section_2_photo from '../photos/section_2_photo.jpg'
             .section_1 div{
                 order:2;
             }
-            .section_1 div:nth-child(1), .section_2 div:nth-child(1){
+            .section_1 div div:nth-child(1), .section_2 div div:nth-child(1){
                 font-size: 20px;
             }
-            .section_1 div:nth-child(2), .section_2 div:nth-child(2){
+            .section_1 div:nth-child(2), .section_2 div div:nth-child(2){
                 font-size: 12px;
             }
-            .section_1 img {
+            .section_1 div {
                 margin-left: 0;
                 order: 1
             }
@@ -47,7 +47,7 @@ import section_2_photo from '../photos/section_2_photo.jpg'
                 margin: 5px;
                 justify-content: center;
             }
-            .section_2 img {
+            .section_2 div {
                 margin-right: 0;
             }
         }
@@ -68,7 +68,7 @@ import section_2_photo from '../photos/section_2_photo.jpg'
                 margin: 5px;
                 justify-content: center;
             }   
-            .section_2 img {
+            .section_2 div {
                 margin-right: 0;
             }
             
@@ -80,26 +80,29 @@ import section_2_photo from '../photos/section_2_photo.jpg'
     <div class='m-[5px] main lg:p-20 font-poppins '>
         
         <div class="flex flex-row-reverse flex-wrap justify-center w-full section_1">
-            <img class='ml-auto px-5 ' src={section_1_photo} alt='img1'/> 
+                <img class='ml-auto px-5 ' src={section_1_photo} alt='img1'/> 
 
             <div class="w-[500px] px-5 " >
                     <div class="font-bold text-[30px] mb-7">
                         {title_left}
                     </div>
-                    <div>
+                    <div class="text-[16px]">
                         {text_left}
                     </div>
             </div>
         </div>
 
         <div class="flex main flex-wrap mt-10 justify-center section_2 w-full">
-            <img class='mr-auto px-5 ' src = {section_2_photo} alt='img2'/>
+            <div class='mr-auto px-5 '>
+                <img  src = {section_2_photo} alt='img2'/>
+            </div>
+            
 
             <div class='w-[500px] px-5 '>
                 <div class="font-bold text-[30px] mb-7">
                     {title_right}
                 </div >
-                <div>
+                <div class="text-[16px]">
                     {text_right}
                 </div>
             </div>
